@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using DataTransaction;
 
 namespace WebApplication1.Controllers
 {
@@ -28,12 +29,13 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult AddContent(AcademicContent content)
         {
-
+            
             return View();
         }
 
         public ActionResult ListContent()
         {
+            
             return View();
         }
 
