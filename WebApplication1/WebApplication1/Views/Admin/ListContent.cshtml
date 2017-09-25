@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WebApplication1.Models.AcademicContent>
+
+@{
+    ViewBag.Title = "ListContent";
+}
+
+<h2>ListContent</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Videos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PdfText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PowerPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Applet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pictures)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Videos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PdfText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerPoint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Applet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pictures)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

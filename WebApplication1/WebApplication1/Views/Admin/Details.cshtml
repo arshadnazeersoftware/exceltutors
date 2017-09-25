@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.AcademicContent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AcademicContent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Videos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Videos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PdfText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PdfText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PowerPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PowerPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Applet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pictures)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pictures)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

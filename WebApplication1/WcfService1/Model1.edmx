@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="exceltutorsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Answer" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Video" Type="nvarchar(max)" />
+          <Property Name="Textual" Type="nvarchar(max)" />
+          <Property Name="PowerPointSlides" Type="nvarchar(max)" />
+          <Property Name="Applet" Type="nvarchar(max)" />
+          <Property Name="Pictures" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionD">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Question" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="exceltutorsModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contents" EntityType="Self.Contents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OptionA" EntityType="Self.OptionA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OptionB" EntityType="Self.OptionB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OptionC" EntityType="Self.OptionC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OptionD" EntityType="Self.OptionD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="exceltutorsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="exceltutorsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="exceltutorsModel.Accounts" />
+          <EntitySet Name="Answers" EntityType="exceltutorsModel.Answers" />
+          <EntitySet Name="Contents" EntityType="exceltutorsModel.Contents" />
+          <EntitySet Name="OptionA" EntityType="exceltutorsModel.OptionA" />
+          <EntitySet Name="OptionB" EntityType="exceltutorsModel.OptionB" />
+          <EntitySet Name="OptionC" EntityType="exceltutorsModel.OptionC" />
+          <EntitySet Name="OptionD" EntityType="exceltutorsModel.OptionD" />
+          <EntitySet Name="Questions" EntityType="exceltutorsModel.Questions" />
+        </EntityContainer>
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Answer" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Textual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PowerPointSlides" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Applet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pictures" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptionD">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Question" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="exceltutorsModelStoreContainer" CdmEntityContainer="exceltutorsEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="exceltutorsModel.Accounts">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="exceltutorsModel.Answers">
+              <MappingFragment StoreEntitySet="Answers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="exceltutorsModel.Contents">
+              <MappingFragment StoreEntitySet="Contents">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Pictures" ColumnName="Pictures" />
+                <ScalarProperty Name="Applet" ColumnName="Applet" />
+                <ScalarProperty Name="PowerPointSlides" ColumnName="PowerPointSlides" />
+                <ScalarProperty Name="Textual" ColumnName="Textual" />
+                <ScalarProperty Name="Video" ColumnName="Video" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OptionA">
+            <EntityTypeMapping TypeName="exceltutorsModel.OptionA">
+              <MappingFragment StoreEntitySet="OptionA">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Choice" ColumnName="Choice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OptionB">
+            <EntityTypeMapping TypeName="exceltutorsModel.OptionB">
+              <MappingFragment StoreEntitySet="OptionB">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Choice" ColumnName="Choice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OptionC">
+            <EntityTypeMapping TypeName="exceltutorsModel.OptionC">
+              <MappingFragment StoreEntitySet="OptionC">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Choice" ColumnName="Choice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OptionD">
+            <EntityTypeMapping TypeName="exceltutorsModel.OptionD">
+              <MappingFragment StoreEntitySet="OptionD">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Choice" ColumnName="Choice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="exceltutorsModel.Questions">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
