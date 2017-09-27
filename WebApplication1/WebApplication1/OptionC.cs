@@ -7,16 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfService1
+namespace WebApplication1
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Accounts
+    public partial class OptionC
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string Choice { get; set; }
         public int Id { get; set; }
-        public string Email { get; set; }
     }
 }

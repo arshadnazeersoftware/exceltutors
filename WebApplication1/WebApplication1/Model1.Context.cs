@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfService1
+namespace WebApplication1
 {
     using System;
     using System.Data.Entity;

@@ -7,14 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfService1
+namespace WebApplication1
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class OptionC
+    public partial class Contents
     {
-        public string Choice { get; set; }
+        public string Video { get; set; }
+        public string Textual { get; set; }
+        public string PowerPointSlides { get; set; }
+        public string Applet { get; set; }
+        public string Pictures { get; set; }
         public int Id { get; set; }
     }
 }

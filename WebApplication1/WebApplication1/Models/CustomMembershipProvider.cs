@@ -7,7 +7,6 @@ namespace WebApplication1.Models
 {
     public class CustomMembershipProvider : MembershipProvider
     {
-        ServiceReference1.Service1Client service1Client = new ServiceReference1.Service1Client();
 
         public override bool EnablePasswordRetrieval => throw new NotImplementedException();
 
@@ -108,7 +107,7 @@ namespace WebApplication1.Models
 
         public override bool ValidateUser(string username, string password)
         {
-            return service1Client.User(username, password);
+            return true;
         }
     }
 }

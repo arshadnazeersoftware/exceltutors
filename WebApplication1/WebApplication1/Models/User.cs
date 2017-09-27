@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WebApplication1.Models
 {
-    public class UserAccount
+    public class User
     {
         [Required(ErrorMessage = "Required")]
         public string Username { get; set; }

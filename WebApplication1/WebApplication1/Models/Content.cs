@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApplication1.Models
 {
-    public class AcademicContent
+    public class Content
     {
         public string Videos { get; set; }
         public string PdfText { get; set; }

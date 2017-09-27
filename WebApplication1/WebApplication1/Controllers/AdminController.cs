@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
-using DataTransaction;
 
 namespace WebApplication1.Controllers
 {
@@ -21,21 +20,21 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult AddContent()
+        public ActionResult Add()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddContent(AcademicContent content)
+        public ActionResult Add(Content content)
         {
-            
+
             return View();
         }
 
-        public ActionResult ListContent()
+        public ActionResult List()
         {
-            
+
             return View();
         }
 

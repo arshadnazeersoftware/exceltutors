@@ -7,12 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfService1
+namespace WebApplication1
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class OptionD
+    public partial class OptionB
     {
         public string Choice { get; set; }
         public int Id { get; set; }

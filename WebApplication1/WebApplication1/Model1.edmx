@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="exceltutorsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="exceltutorsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accounts">
           <Key>
             <PropertyRef Name="Id" />
@@ -77,28 +77,19 @@
           <EntitySet Name="OptionD" EntityType="Self.OptionD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="exceltutorsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="exceltutorsEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Accounts" EntityType="exceltutorsModel.Accounts" />
-          <EntitySet Name="Answers" EntityType="exceltutorsModel.Answers" />
-          <EntitySet Name="Contents" EntityType="exceltutorsModel.Contents" />
-          <EntitySet Name="OptionA" EntityType="exceltutorsModel.OptionA" />
-          <EntitySet Name="OptionB" EntityType="exceltutorsModel.OptionB" />
-          <EntitySet Name="OptionC" EntityType="exceltutorsModel.OptionC" />
-          <EntitySet Name="OptionD" EntityType="exceltutorsModel.OptionD" />
-          <EntitySet Name="Questions" EntityType="exceltutorsModel.Questions" />
-        </EntityContainer>
         <EntityType Name="Accounts">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Answers">
           <Key>
@@ -122,38 +113,48 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Choice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="OptionB">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Choice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="OptionC">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Choice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="OptionD">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Choice" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Choice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Questions">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Question" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
-        </Schema>
+        <EntityContainer Name="exceltutorsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" />
+          <EntitySet Name="Answers" EntityType="Self.Answers" />
+          <EntitySet Name="Contents" EntityType="Self.Contents" />
+          <EntitySet Name="OptionA" EntityType="Self.OptionA" />
+          <EntitySet Name="OptionB" EntityType="Self.OptionB" />
+          <EntitySet Name="OptionC" EntityType="Self.OptionC" />
+          <EntitySet Name="OptionD" EntityType="Self.OptionD" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" />
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -162,70 +163,70 @@
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="exceltutorsModel.Accounts">
               <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Answers">
             <EntityTypeMapping TypeName="exceltutorsModel.Answers">
               <MappingFragment StoreEntitySet="Answers">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Contents">
             <EntityTypeMapping TypeName="exceltutorsModel.Contents">
               <MappingFragment StoreEntitySet="Contents">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Pictures" ColumnName="Pictures" />
-                <ScalarProperty Name="Applet" ColumnName="Applet" />
-                <ScalarProperty Name="PowerPointSlides" ColumnName="PowerPointSlides" />
-                <ScalarProperty Name="Textual" ColumnName="Textual" />
                 <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="Textual" ColumnName="Textual" />
+                <ScalarProperty Name="PowerPointSlides" ColumnName="PowerPointSlides" />
+                <ScalarProperty Name="Applet" ColumnName="Applet" />
+                <ScalarProperty Name="Pictures" ColumnName="Pictures" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OptionA">
             <EntityTypeMapping TypeName="exceltutorsModel.OptionA">
               <MappingFragment StoreEntitySet="OptionA">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Choice" ColumnName="Choice" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OptionB">
             <EntityTypeMapping TypeName="exceltutorsModel.OptionB">
               <MappingFragment StoreEntitySet="OptionB">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Choice" ColumnName="Choice" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OptionC">
             <EntityTypeMapping TypeName="exceltutorsModel.OptionC">
               <MappingFragment StoreEntitySet="OptionC">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Choice" ColumnName="Choice" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OptionD">
             <EntityTypeMapping TypeName="exceltutorsModel.OptionD">
               <MappingFragment StoreEntitySet="OptionD">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Choice" ColumnName="Choice" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Questions">
             <EntityTypeMapping TypeName="exceltutorsModel.Questions">
               <MappingFragment StoreEntitySet="Questions">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

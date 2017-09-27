@@ -5,14 +5,14 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using WebApplication1.Models;
-using DataTransaction;
+
 
 namespace WebApplication1.Controllers
 {
     public class AccountController : Controller
     {
-        private ServiceReference1.Service1Client obj = new ServiceReference1.Service1Client();
         // GET: Account
+        User user = new User();
         [HttpGet]
         public ActionResult Login()
         {
@@ -22,7 +22,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowAnonymous]
-        public ActionResult Login(Models.UserAccount userAccount)
+        public ActionResult Login(Models.User userAccount)
         {
             if (!ModelState.IsValid)
             {
@@ -54,11 +54,11 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(UserAccount user)
+        public ActionResult Register(User this_user)
         {
             if (ModelState.IsValid)
             {
-                obj.Create(user.Username, user.Password, user.Email);
+                //user.CreateUser(this_user.Username, this_user.Password, this_user.Email);
                 return RedirectToAction("Login", "Account");
             }
             return View(user);
