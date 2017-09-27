@@ -13,6 +13,7 @@ namespace WebApplication1.Controllers
     {
         // GET: Account
         User user = new User();
+
         [HttpGet]
         public ActionResult Login()
         {

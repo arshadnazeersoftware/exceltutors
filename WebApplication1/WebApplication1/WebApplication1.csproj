@@ -268,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Institutions\College\" />
+    <Folder Include="Institutions\School\" />
+    <Folder Include="Institutions\University\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
