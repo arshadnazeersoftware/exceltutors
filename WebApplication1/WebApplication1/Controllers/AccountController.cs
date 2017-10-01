@@ -35,13 +35,7 @@ namespace WebApplication1.Controllers
             {
                 FormsAuthentication.SetAuthCookie(userAccount.Username, false);
                 ViewBag.Welcome = String.Format("Welcome {0}", userAccount.Username);
-                //if (roles == admin)
-                //{
-                //}
-                //else
-                //{
-                    return RedirectToAction("Index", "Home");
-                //}
+                return RedirectToAction("Index", "Home");
             }
             else
             {

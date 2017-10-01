@@ -165,7 +165,9 @@
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="CustomMembershipProvider.cs" />
     <Compile Include="CustomRoleProvider.cs" />
     <Compile Include="Global.asax.cs">
@@ -268,12 +270,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="SiteArtifacts\College\" />
-    <Folder Include="SiteArtifacts\School\" />
-    <Folder Include="SiteArtifacts\University\" />
-    <Folder Include="SiteArtifacts\User\Admin\" />
-    <Folder Include="SiteArtifacts\User\Faculty\" />
-    <Folder Include="SiteArtifacts\User\Student\" />
+    <Folder Include="SiteArtifacts\Institutions\College\" />
+    <Folder Include="SiteArtifacts\Institutions\School\" />
+    <Folder Include="SiteArtifacts\Institutions\University\" />
+    <Folder Include="SiteArtifacts\Users\Admin\" />
+    <Folder Include="SiteArtifacts\Users\Faculty\" />
+    <Folder Include="SiteArtifacts\Users\Student\" />
+    <Folder Include="Views\Faculty\" />
+    <Folder Include="Views\Student\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
