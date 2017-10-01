@@ -166,6 +166,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="SiteArtifacts\User\CustomMembershipProvider.cs" />
+    <Compile Include="SiteArtifacts\User\CustomRoleProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,8 +187,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Content.cs" />
-    <Compile Include="Models\CustomMembershipProvider.cs" />
-    <Compile Include="Models\CustomRoleProvider.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="OptionA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -268,9 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Institutions\College\" />
-    <Folder Include="Institutions\School\" />
-    <Folder Include="Institutions\University\" />
+    <Folder Include="SiteArtifacts\College\" />
+    <Folder Include="SiteArtifacts\School\" />
+    <Folder Include="SiteArtifacts\University\" />
+    <Folder Include="SiteArtifacts\User\Admin\" />
+    <Folder Include="SiteArtifacts\User\Faculty\" />
+    <Folder Include="SiteArtifacts\User\Student\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

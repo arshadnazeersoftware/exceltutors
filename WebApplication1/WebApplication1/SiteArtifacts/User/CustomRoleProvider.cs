@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 
+
 namespace WebApplication1.Models
 {
     public class CustomRoleProvider : RoleProvider
