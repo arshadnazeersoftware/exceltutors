@@ -7,7 +7,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class AdminController : Controller
+    public class AdministratorController : Controller
     {
         // GET: Admin
         public ActionResult Index()

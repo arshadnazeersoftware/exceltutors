@@ -164,7 +164,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -263,17 +263,17 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Admin\Add.cshtml" />
-    <Content Include="Views\Admin\List.cshtml" />
-    <Content Include="Views\Admin\Details.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Administrator\Add.cshtml" />
+    <Content Include="Views\Administrator\List.cshtml" />
+    <Content Include="Views\Administrator\Details.cshtml" />
+    <Content Include="Views\Administrator\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="SiteArtifacts\Institutions\College\" />
     <Folder Include="SiteArtifacts\Institutions\School\" />
     <Folder Include="SiteArtifacts\Institutions\University\" />
-    <Folder Include="SiteArtifacts\Users\Admin\" />
+    <Folder Include="SiteArtifacts\Users\Administrator\" />
     <Folder Include="SiteArtifacts\Users\Faculty\" />
     <Folder Include="SiteArtifacts\Users\Student\" />
     <Folder Include="Views\Faculty\" />
