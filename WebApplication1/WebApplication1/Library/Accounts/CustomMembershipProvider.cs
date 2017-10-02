@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 
 
-namespace WebApplication1.Models
+namespace WebApplication1.Library.Accounts
 {
     public class CustomMembershipProvider : MembershipProvider
     {

@@ -168,8 +168,8 @@
     <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
-    <Compile Include="CustomMembershipProvider.cs" />
-    <Compile Include="CustomRoleProvider.cs" />
+    <Compile Include="Library\Accounts\CustomMembershipProvider.cs" />
+    <Compile Include="Library\Accounts\CustomRoleProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,12 +270,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="SiteArtifacts\Institutions\College\" />
-    <Folder Include="SiteArtifacts\Institutions\School\" />
-    <Folder Include="SiteArtifacts\Institutions\University\" />
-    <Folder Include="SiteArtifacts\Users\Administrator\" />
-    <Folder Include="SiteArtifacts\Users\Faculty\" />
-    <Folder Include="SiteArtifacts\Users\Student\" />
+    <Folder Include="Library\Institutions\College\" />
+    <Folder Include="Library\Institutions\School\" />
+    <Folder Include="Library\Institutions\University\" />
+    <Folder Include="Library\Users\Administrator\" />
+    <Folder Include="Library\Users\Faculty\" />
+    <Folder Include="Library\Users\Student\" />
     <Folder Include="Views\Faculty\" />
     <Folder Include="Views\Student\" />
   </ItemGroup>
